@@ -1,0 +1,20 @@
+{
+  "name": "babelsandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx babel src -d dist",
+    "build:case2": "npx babel .\\src\\case2_babel\\ -d dist\\case2_babel"
+
+  },
+  "author": "kotodu",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  },
+  "dependencies": {}
+}

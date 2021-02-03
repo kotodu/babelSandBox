@@ -1,5 +1,6 @@
 # 目次
 - テーマ「なぜcreate-react-appを使うのか」
+    - 2021/02/02,2021/02/04 react勉強会
 
 ## 前編 : JavaScriptを取り巻く環境とJSX
 - どこまでがJavaScript？
@@ -12,9 +13,11 @@
 3. html内にjsxを書く
 4. webpackでモジュールをひとまとめに
 
+<div class="page"/>
+
 # [1]どこまでがJavaScript？
 ## あれもJavaScript、これもJavaScript
-- ウェブサイト
+- ウェブサイト/ウェブアプリ
 - 高機能エディター
     - atom/vscode
 - チャットツール
@@ -22,8 +25,9 @@
 - スマートフォン向けのアプリ
     - Instagram
 - ゲーム開発ソフトやデザインソフトの拡張スクリプト
-    - Unity,Ai
+    - Unity, Adobe Illustrator
 - IoTデバイス
+    - ラズパイ
 
 ## 実行環境が異なる
 - ブラウザ
@@ -46,7 +50,9 @@
 
 ## 参考
 - https://jsprimer.net/basic/introduction/
-    - 基礎から応用まで、JavaScriptを学べる良書(推し)
+    - 基礎から応用まで、JavaScriptを学べる良書
+
+<div class="page"/>
 
 # [2]変換する仕組みについて
 ## 歴史的経緯
@@ -75,7 +81,9 @@
 - https://typescript-jp.gitbook.io/deep-dive/recap
     - JavaScriptとTypeScriptの関係をうまく示した図が分かりやすい
 
-## JSXの作法
+<div class="page"/>
+
+## JSXの使い方(p37-)
 1. スコープにはReactが必要
 2. {}を使って式を埋め込む
 3. JSX要素も式として扱う
@@ -96,14 +104,14 @@
 - https://ja.reactjs.org/docs/jsx-in-depth.html
     - JSXを深く知る為のReact発展チュートリル
 
-## Babelの作法
-### Babelとは
+## Babelについて
 - トランスパイラの1つ
-- 主にJavaScriptのバージョンをトランスパイルする
     - JSXやTypeScriptもトランスパイル可能
 - https://babeljs.io/repl/
     - 変換ツールを即座に試せるインタプリタ(READ-EVAL-PRINT LOOP)
 - プラグインにより、オリジナルの変換も行うことができる
+
+<div class="page"/>
 
 # [3]モジュールを束ねる仕組み
 - 大量のモジュールをJavaScriptでは利用しており、束ねる必要がある
@@ -130,7 +138,9 @@
 
 ### 要点
 - 基本は`import *** from *** ;`でモジュールを読み込む
-- 歴史的経緯から複数の書き方がある
+- 歴史的経緯から複数の書き方があり、注意が必要
+
+<div class="page"/>
 
 ## webpack
 - モジュールをひとまとめに束ねる仕組みの1つ
@@ -145,9 +155,10 @@
 ## 現在主流の開発の流れ
 - ローカルにnodejsを用意し、モジュールを読み込んで開発
 - リリースなどしたい際、「ビルド」する
-    - コードをトランスパイル
-    - モジュールをバンドル
+    - コードをトランスパイル(babelなど)
+    - モジュールをバンドル(webpackなど)
     - 静的なJavaScriptを出力する
+- 環境設定が非常に手間であり、create-react-appなどのツールやフレームワークを使うのが主流
 
 # [前編要点]JavaScriptを取り巻く環境とJSX
 - 言語が日々進化し、さらに手軽に始められる為、広く使われている
